@@ -1,0 +1,19 @@
+version: '1.0'
+
+services:
+  main:
+    container_name: freight_quotation_mvp
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    environment:
+      - API_TOKEN=A13Mjz900oa64nqmqt1mnhb40mdn3jtp4
+      - NEXT_PUBLIC_BASE_URL=https://staging.smartenvios.tec.br/quote/api/v2
+
+    command: yarn dev
+    ports:
+      - 3000:3000

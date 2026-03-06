@@ -1,0 +1,58 @@
+@import "@/styles/variables";
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: $text-main;
+    margin: 0;
+  }
+}
+
+.headerIcon {
+  font-size: 20px;
+  color: $primary-color;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+.breadcrumbIcon {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85) !important;
+
+  svg {
+    color: rgba(0, 0, 0, 0.85) !important;
+    fill: rgba(0, 0, 0, 0.85) !important;
+  }
+}
+
+.separator {
+  color: rgba(0, 0, 0, 0.85);
+  margin: 0 8px;
+  font-weight: 400;
+}
+
+.current {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
+}

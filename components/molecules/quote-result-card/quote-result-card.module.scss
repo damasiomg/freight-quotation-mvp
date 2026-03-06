@@ -1,0 +1,169 @@
+@import "@/styles/variables";
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: $bg-card;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  @include transition-standard;
+
+  &:hover {
+    border-color: var(--functional-link);
+    box-shadow: 0 2px 8px rgba(196, 30, 138, 0.1);
+  }
+
+  &.selected {
+    border-color: var(--functional-link);
+      box-shadow:
+    0 2px 6px rgba(0,0,0,0.12), 0 0 0 1px rgba(106,169,255,0.2);
+  }
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carrierLink{
+  display: flex;
+  gap: 4px;
+  color: var(--functional-link);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .carrierLink__icon {
+    font-size: 16px;
+  
+  }
+
+}
+
+
+.carrierLogo {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carrierInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.carrierName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--functional-link);
+  text-transform: uppercase;
+  
+}
+
+.serviceName {
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+
+  .starIcon {
+    font-size: 14px;
+    color: #FFB800;
+  }
+
+}
+
+.starIcon {
+  font-size: 14px;
+  color: #FFB800;
+}
+
+.detailsSection {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.deliveryTime {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flagIcon {
+  font-size: 24px;
+  color: $primary-color;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: var(--text-label);
+  font-weight: 400;
+  //text-align: right;
+
+
+}
+
+.value {
+  display: block;
+  font-size: 14px;
+  color: $text-main;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.selectBtn {
+  padding: 10px 24px;
+  border: 1px solid $primary-color;
+  border-radius: 16px;
+  background: transparent;
+  color: $primary-color;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba(196, 30, 138, 0.05);
+  }
+
+  &.selectedBtn {
+    background: linear-gradient(90deg, #E84C8A 0%, $primary-color 30%, #7B2D8E 70%, #9B4FA8 100%);
+    color: $bg-card;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .detailsSection {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .selectBtn {
+    width: 100%;
+  }
+}

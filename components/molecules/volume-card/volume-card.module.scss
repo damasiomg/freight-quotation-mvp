@@ -1,0 +1,63 @@
+@import "@/styles/variables";
+
+.volumeCard {
+  @include card-base;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  background: linear-gradient(135deg, $primary-color 0%, #7B2D8E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.removeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(196, 30, 138, 0.05);
+  }
+}
+
+.trashIcon {
+  font-size: 16px;
+  color: $primary-color !important;
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: $primary-color !important;
+  }
+}
+
+.gradientText {
+  background: linear-gradient(135deg, $primary-color 0%, #7B2D8E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.fields {
+  // Fields container
+}

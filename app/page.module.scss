@@ -1,0 +1,32 @@
+@import "@/styles/variables";
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: $text-main;
+    margin: 0;
+  }
+}
+
+.headerIcon {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.85) !important;
+  
+  svg {
+    fill: rgba(0, 0, 0, 0.85) !important;
+  }
+}
+
+.current {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
+}

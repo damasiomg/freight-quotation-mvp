@@ -1,0 +1,218 @@
+@import "@/styles/variables";
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #F5F2F7;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  &.collapsed {
+    width: 70px;
+  }
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logoComposed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoText {
+  display: flex;
+  align-items: baseline;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.smart {
+  color: #666;
+  font-weight: 300;
+}
+
+.envios {
+  color: $primary-color;
+  font-weight: 700;
+}
+
+.expandBtn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.collapseBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.collapseIcon {
+  font-size: 16px;
+  color: #531993;
+}
+
+.greeting {
+  padding: 24px 20px 16px;
+  font-size: 14px;
+  color: $text-main;
+  font-weight: 400;
+
+  .userName {
+    background: linear-gradient(135deg, $primary-color 0%, #7B2D8E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+  }
+}
+
+.menuSection {
+  padding: 0 16px;
+}
+
+.menuLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(196, 30, 138, 0.1) 0%, rgba(123, 45, 142, 0.1) 100%);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: $text-main;
+  @include transition-standard;
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(196, 30, 138, 0.2) 0%, rgba(123, 45, 142, 0.2) 100%);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #5D2E6B 0%, #3D1F4A 100%);
+    color: $bg-card;
+    box-shadow: 0 2px 8px rgba(93, 46, 107, 0.3);
+
+    .menuIcon {
+      color: $bg-card;
+    }
+  }
+}
+
+.menuIcon {
+  font-size: 18px;
+  color: $primary-color;
+}
+
+.menuSectionCollapsed {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.menuButtonCollapsed {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include transition-standard;
+
+  &:hover {
+    background: rgba(196, 30, 138, 0.1);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #5D2E6B 0%, #3D1F4A 100%);
+
+    .menuIcon {
+      color: $bg-card;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+
+    .logoSection {
+      justify-content: center;
+      padding: 16px 8px;
+    }
+
+    .logoComposed .logoText,
+    .collapseBtn,
+    .greeting,
+    .menuLabel {
+      display: none;
+    }
+
+    .menuSection {
+      padding: 16px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menuButton {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      justify-content: center;
+
+      span:not(.menuIcon) {
+        display: none;
+      }
+    }
+  }
+}
