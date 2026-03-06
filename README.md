@@ -71,11 +71,11 @@ This project is a Minimum Viable Product (MVP) for a Freight Quotation applicati
 
 ## Live Preview
 
-[Insert your live preview link here]
+[Freight Quotation MVP](https://freight-quotation-mvp-56e4.vercel.app/)
 
 ## Presentation Video
 
-[Insert your presentation video link here]
+[Watch video](https://youtu.be/ZcidR9IetXk)
 
 ---
 
