@@ -2,8 +2,10 @@ const path = require('path');
 
 
 const nextConfig = {
-  distDir: process.env.NEXT_DIST_DIR || '.next',
-  output: process.env.NEXT_OUTPUT_MODE,
+  env: {
+    API_TOKEN: process.env.API_TOKEN,
+    NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
+  },
   experimental: {
     outputFileTracingRoot: path.join(__dirname, '../'),
   },
