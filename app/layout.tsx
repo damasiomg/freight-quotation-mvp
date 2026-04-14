@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Cotação de Frete - SmartEnvios',
   description: 'Sistema de cotação e contratação de frete online',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/assets/favicon.svg',
   },
   openGraph: {
     images: ['/only_logo.png'],
